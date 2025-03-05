@@ -80,8 +80,8 @@ const teamMembers = ref([
                             class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                             <!-- Team Member Image -->
                             <div class="relative h-64 overflow-hidden">
-                                <img :src="`/Acadtrix/teams/${member.image}`" :alt="member.name"
-                                    class="w-full h-full object-cover transition-transform duration-500">
+                                <img :src="`/teams/${member.image}`" :alt="member.name"
+                                    class="w-full h-full object-cover transition-transform duration-500">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-[#2F496E] opacity-90 flex items-end p-4">
                                     <p class="text-white text-sm">{{ member.description }}</p>
