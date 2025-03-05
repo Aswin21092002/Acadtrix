@@ -9,11 +9,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  base: '/', // Ensure correct base path
   build: {
     outDir: 'dist', // Ensures Netlify serves from 'dist'
   },
   server: {
-    port: 3000, // Optional: Change port if needed
-    open: true, // Automatically open in browser
+    port: 3000, // Default port (can be changed if needed)
+    open: true, // Auto open in browser
   },
 });
