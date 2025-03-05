@@ -1,19 +1,19 @@
 import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueDevTools from 'vite-plugin-vue-devtools';
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/Acadtrix/', // Change this to match your GitHub repo name
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  build: {
+    outDir: 'dist', // Ensures Netlify serves from 'dist'
+  },
+  server: {
+    port: 3000, // Optional: Change port if needed
+    open: true, // Automatically open in browser
   },
 });
